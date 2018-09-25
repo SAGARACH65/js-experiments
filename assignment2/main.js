@@ -34,3 +34,4 @@ var getMovies = function (movieLists) {
 }
 
 console.log(getMovies(movieLists));
+

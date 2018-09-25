@@ -1,17 +1,16 @@
 var normalizedData = {};
+// this variable is for indexing the entries inside the result object
+let dataCounter = 1;
 
 var findChildren = function (people) {
     let childArray = [];
     for (let i = 0; i < people.length; i++) {
         childArray.push(people[i].id)
     }
-    return childArray; 
+    return childArray;
 }
 
 var normalizeJSON = function (people) {
-
-    // this variable is for indexing the entries inside the result object
-    let dataCounter = 1;
 
     for (let x = 0; x < people.length; x++) {
         // console.log(people.length)
@@ -37,6 +36,5 @@ var normalizeJSON = function (people) {
     }
     return normalizedData;
 }
-
 
 console.log(normalizeJSON(people));
