@@ -34,7 +34,8 @@ var normalizeJSON = function (people) {
             dataCounter++;
         }
     }
-   
+
 }
+
 normalizeJSON(people);
 console.log(normalizedData);
