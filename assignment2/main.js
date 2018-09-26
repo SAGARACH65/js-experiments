@@ -1,5 +1,5 @@
-var checkIfSelected = function (dimension) {
-    return ((dimension.x === 150 && dimension.y === 200) ? true : false);
+var checkIfSelected = function (video) {
+    return ((video.width === 150 && video.height === 200) ? true : false);
 }
 
 var getMovies = function (movieLists) {
@@ -15,12 +15,7 @@ var getMovies = function (movieLists) {
                 var videoBoxart = videos[i].boxarts[j];
                 var result = {};
 
-                var dimension = {
-                    x: videoBoxart.width,
-                    y: videoBoxart.height
-                }
-
-                if (checkIfSelected(dimension)) {
+                if (checkIfSelected(videoBoxart)) {
                     result['id'] = videos[i].id;
                     result['title'] = videos[i].title;
                     result['url'] = videoBoxart.url;
@@ -34,4 +29,3 @@ var getMovies = function (movieLists) {
 }
 
 console.log(getMovies(movieLists));
-
