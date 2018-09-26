@@ -1,5 +1,5 @@
-let checkIfSelected = dimension => {
-    return ((dimension.x === 150 && dimension.y === 200) ? true : false);
+let checkIfSelected = video => {
+    return ((video.width === 150 && video.height === 200) ? true : false);
 }
 
 let getMovies = movieLists => {
@@ -11,12 +11,9 @@ let getMovies = movieLists => {
 
             video.boxarts.map(boxart => {
                 let result = {};
-                let dimension = {
-                    x: boxart.width,
-                    y: boxart.height
-                }
+               
 
-                if (checkIfSelected(dimension)) {
+                if (checkIfSelected(boxart)) {
                     result['id'] = video.id;
                     result['title'] = video.title;
                     result['url'] = boxart.url;
